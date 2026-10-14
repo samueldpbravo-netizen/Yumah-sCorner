@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a table | Jumah's Corner</title>
+  <meta name="description" content="Book a table, a watch party or catering at Jumah's Corner in Ghent. Your request goes straight to the restaurant.">
+  <meta name="theme-color" content="#003b03">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Londrina+Solid:wght@300;400;900&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="nav-logo" href="index.html" aria-label="Jumah's Corner, home"><img src="assets/logo.png" alt="Jumah's Corner" width="73" height="62"></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+        <li><a href="book.html" aria-current="page" data-i18n="nav.book">Book</a></li>
+        <li><a href="index.html#find" data-i18n="nav.find">Find us</a></li>
+      </ul>
+      <div class="nav-right">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="nl" aria-pressed="false">NL</button>
+          <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">MENU</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-title">
+      <div class="wrap">
+        <h1 data-i18n="book.page.title">Book</h1>
+        <p data-i18n="book.page.p">Reserve a table, plan a watch party or ask about catering. Your request goes straight to our phone.</p>
+      </div>
+    </section>
+
+    <section class="section section-yellow">
+      <div class="wrap book-grid">
+        <form class="form" id="booking-form" novalidate>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-phone" data-i18n="form.phone">Your phone</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+            <span class="hint" data-i18n="form.phone.hint">So we can confirm with you.</span>
+          </div>
+          <div class="field full">
+            <label for="f-type" data-i18n="form.type">What is it for</label>
+            <select id="f-type" name="type">
+              <option value="table" data-i18n="form.type.table">Table for dinner</option>
+              <option value="watch" data-i18n="form.type.watch">Watch party</option>
+              <option value="catering" data-i18n="form.type.catering">Catering</option>
+              <option value="party" data-i18n="form.type.party">Private party</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="f-date" data-i18n="form.date">Date</label>
+            <input id="f-date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="f-time" data-i18n="form.time">Time</label>
+            <input id="f-time" name="time" type="time" min="12:00" max="23:30" value="19:00" required>
+          </div>
+          <div class="field full">
+            <label for="f-guests" data-i18n="form.guests">Guests</label>
+            <input id="f-guests" name="guests" type="number" min="1" max="500" value="2" inputmode="numeric" required>
+          </div>
+          <div class="field full">
+            <label for="f-notes" data-i18n="form.notes">Anything we should know</label>
+            <textarea id="f-notes" name="notes"></textarea>
+          </div>
+          <div class="hp" aria-hidden="true">
+            <label for="f-website">Leave this empty</label>
+            <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="status" id="form-status" role="status" aria-live="polite" hidden></div>
+          <div class="field full">
+            <button class="btn btn-yellow" id="form-submit" type="submit" data-i18n="form.send">Send booking</button>
+          </div>
+        </form>
+
+        <aside class="side-card">
+          <h2>Or just call</h2>
+          <p>We are open every day from 12:00 to 00:00.</p>
+          <p><a class="btn btn-green" href="tel:+32485302841">+32 485 30 28 41</a></p>
+          <ul>
+            <li>Voskenslaan 296, 9000 Ghent</li>
+            <li>Big groups and catering: tell us the date and the number of guests.</li>
+            <li>Watch parties: bookings are best made a few days before the match.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="pattern pattern-band" aria-hidden="true"></div>
+    <div class="wrap footer-main">
+      <ul class="footer-links">
+        <li><a href="menu.html" data-i18n="nav.menu">Menu</a></li>
+        <li><a href="book.html" data-i18n="nav.book">Book</a></li>
+        <li><a href="https://www.instagram.com/jumahscorner/" target="_blank" rel="noopener" data-i18n="foot.follow">Follow us on Instagram</a></li>
+      </ul>
+      <img src="assets/logo.png" alt="" width="165" height="140">
+    </div>
+    <div class="wrap footer-small">
+      <span>Voskenslaan 296, 9000 Ghent</span>
+      <span>Open every day 12:00 to 00:00</span>
+      <span>&copy; <span data-year>2026</span> Jumah's Corner</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/book.js"></script>
+</body>
+</html>
